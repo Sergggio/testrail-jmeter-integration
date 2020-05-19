@@ -31,7 +31,8 @@ Include Test plan - File Name:<br/>
 
 ### Step 6. JMeter: Open TestRail_integration.jmx and configure it<br/>
 * add HTTP Header Manager and put Content-Type "application/json"
-* if you want to make your sending report optional, you can use variable "reportToTR" and "If controller"
+* if you don't want to send all your test executions to TestRail you can use "If controller" and boolean variable, for example "reportToTR":<br/><br/>
+![if controller](../master/images/ifcontroller.png)<br/>
 * open HTTP Request "POST Test Run" and add server name, add your Basic authorization to its HTTP Header Manager
 * open HTTP Request "POST Add result" and add server name, add your Basic authorization to its HTTP Header Manager
 * open HTTP Request "POST Close Run" and add server name, add your Basic authorization to its HTTP Header Manager
